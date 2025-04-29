@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeNova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>TypeNova</h1>
+    
+    <div id="mainMenu" class="main-menu">
+      <button id="startBtn" class="menu-btn">Start</button>
+      <button id="optionBtn" class="menu-btn">Option</button>
+      <button id="leaderboardBtn" class="menu-btn">Leaderboard</button>
+    </div>
+
+    <div id="gameModeMenu" class="menu" style="display: none;">
+      <h2>Pilih Mode Permainan</h2>
+      <button id="wordMode" class="mode-btn">Mode Kata</button>
+      <button id="sentenceMode" class="mode-btn">Mode Kalimat</button>
+      <button id="backToMain" class="mode-btn">Kembali</button>
+    </div>
+
+    <div id="optionMenu" class="menu" style="display: none;">
+      <h2>Pengaturan</h2>
+      <div class="option-item">
+        <label for="difficulty">Tingkat Kesulitan:</label>
+        <select id="difficulty" class="option-select">
+          <option value="easy">Mudah</option>
+          <option value="medium">Sedang</option>
+          <option value="hard">Sulit</option>
+        </select>
+      </div>
+      <div class="option-item">
+        <label for="timeLimit">Batas Waktu (detik):</label>
+        <input type="number" id="timeLimit" class="option-input" value="30" min="10" max="120">
+      </div>
+      <button id="saveOptions" class="mode-btn">Simpan</button>
+      <button id="backToMainFromOption" class="mode-btn">Kembali</button>
+    </div>
+
+    <div id="leaderboardMenu" class="menu" style="display: none;">
+      <h2>Leaderboard</h2>
+      <div id="leaderboardContent" class="leaderboard-content">
+        <!-- Leaderboard content will be populated by JavaScript -->
+      </div>
+      <button id="backToMainFromLeaderboard" class="mode-btn">Kembali</button>
+    </div>
+
+    <div id="game" class="game" style="display: none;">
+      <div id="word">Loading...</div>
+      <input type="text" id="input" autocomplete="off" placeholder="Type here..." />
+      <div class="stats">
+        <p>Time left: <span id="time">30</span>s</p>
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
